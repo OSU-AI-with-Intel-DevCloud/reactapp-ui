@@ -15,9 +15,9 @@ api = Flask(__name__)
 def get_results(path: str):
     #path = './example.txt'
     file_path = urllib.parse.unquote(path)
-    p = subprocess.Popen(f"scp {file_path} devcloud:testing/input/combined", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    p = subprocess.Popen(f"scp {file_path} devcloud:deepfake/input/combined", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     time.sleep(3)
-    p2 = subprocess.Popen("scp devcloud:testing/input/combined/example.txt output.txt", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    p2 = subprocess.Popen("scp devcloud:deepfake/input/combined/example.txt output.txt", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     time.sleep(0.1)
     with open('output.txt') as f:
         lines = f.readlines()
