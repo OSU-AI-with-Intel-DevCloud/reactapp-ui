@@ -24,3 +24,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 
 The page will reload when you make changes.\
 You may also see any lint errors in the console.
+
+### `ssh config`
+
+Setup ssh with [https://devcloud.intel.com/oneapi/documentation/connect-with-ssh-linux-macos/](https://devcloud.intel.com/oneapi/documentation/connect-with-ssh-linux-macos/).\
+This is necessary for the backend to work correctly and send files to Intel DevCloud
