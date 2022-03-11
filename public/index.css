@@ -1,111 +1,108 @@
 /* css for index.html in the main public folder */
 body {
-    background-color: #3f3f43;
+  background-color: #3f3f43;
 }
 
 img {
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    height: 650px;
-    width: 1100px;
-    image-resolution: 700dpi;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 650px;
+  width: 1100px;
+  image-resolution: 700dpi;
 }
 
 #picture {
-    height: 570px;
-     width: 1150px;
+  height: 570px;
+  width: 1150px;
 }
 
 #box_title {
-    width: 700px;
-    position: absolute;
-    top: 5px;
-    left: 100px;
+  width: 700px;
+  position: absolute;
+  top: 5px;
+  left: 100px;
 }
 
 #title {
-    color: white;
-    font-size: 75px;
-    text-align: left;
-    font-family: "Georgia", serif;
+  color: white;
+  font-size: 75px;
+  text-align: left;
+  font-family: "Georgia", serif;
 }
 
 #background-aboutus {
-    height: 130px;
-    width: 700px;
-    position: absolute;
-    background-color: #b5b5ba;
-    opacity: 0.6;
-    left: 20px;
-    top: 620px;
+  height: 130px;
+  width: 700px;
+  position: absolute;
+  background-color: #b5b5ba;
+  opacity: 0.6;
+  left: 20px;
+  top: 620px;
 }
 
-#box_aboutus{
-    height:200px;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    top: 600px;
-    left: 15px;
-    width: 600px;
+#box_aboutus {
+  height: 200px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  top: 600px;
+  left: 15px;
+  width: 600px;
 }
 
 #aboutus {
-    height: 100%;
-    width: 100%;
-    color: white;
-    text-align: left;
-    font-size: 28px;
-    font-family: "Georgia", serif;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-align: left;
+  font-size: 28px;
+  font-family: "Georgia", serif;
 }
 
 #box-second_section {
-    height:200px;
-    position: absolute;
-    top: 640px;
-    left: 15px;
-    width: 600px;
+  height: 200px;
+  position: absolute;
+  top: 640px;
+  left: 15px;
+  width: 600px;
 }
 
 #second_section {
-    height: 100%;
-    width: 100%;
-    color: white;
-    text-align: left;
-    font-size: 20px;
-    font-family: "Georgia", serif;
+  height: 100%;
+  width: 100%;
+  color: white;
+  text-align: left;
+  font-size: 20px;
+  font-family: "Georgia", serif;
 }
 
 #box_credits {
-    position: absolute;
-    margin-top: 0;
-    top: 400px;
-    left: 15px;
-    width: 250px;
+  position: absolute;
+  margin-top: 0;
+  top: 400px;
+  left: 15px;
+  width: 250px;
 }
 
 #credits {
-    text-align: left;
-    color: white;
-    font-size: 10px;
-    font-family: "Georgia", serif;
+  text-align: left;
+  color: white;
+  font-size: 10px;
+  font-family: "Georgia", serif;
 }
 
 #box_uploadDesc {
-    position: absolute;
-    top: 700px;
-    right: 0px;
-    height: 100px;
-    width: 680px;
+  position: absolute;
+  top: 700px;
+  right: 0px;
+  height: 100px;
+  width: 680px;
 }
 
-#uploadDesc{
-    color: white;
-    text-align: left;
-    font-family: "Georgia", serif;
-    font-size: 15px;
+#uploadDesc {
+  color: white;
+  text-align: left;
+  font-family: "Georgia", serif;
+  font-size: 15px;
 }
-
-
-
