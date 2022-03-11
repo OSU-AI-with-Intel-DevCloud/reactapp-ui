@@ -17,13 +17,6 @@ const globalStyles = css`
     font-weight: 300;
     margin: 0;
   }
-    #copyfilepath {
-        position: absolute;
-        top: 650px;
-        right: 400px;
-        font-family: "Georgia", serif;
-    }
-    
     #upload {
         position: absolute;
         right: 0px;
@@ -34,12 +27,50 @@ const globalStyles = css`
         color: white;
         font-family: "Georgia", serif;
     }
+
+    #upload:hover {
+        background-color: #dbdbdd;
+        cursor: pointer;
+        width: 400px;
+        height: 70px;
+        position: fixed;
+        color: black;
+    }
+    
+    #upload:active {
+        background-color: #dbdbdd;
+    }
+    
+    #copyfilepath {
+        position: absolute;
+        top: 650px;
+        right: 400px;
+        font-family: "Georgia", serif;
+        background-color: #66676d;
+        color: white;
+        width: 100px;
+        height: 30px;
+    }
+
+    #copyfilepath:hover {
+        background-color: #dbdbdd;
+        cursor: pointer;
+        width: 100px;
+        height: 30px;
+        position: fixed;
+        color: black;
+    }
     
     #input {
         position: absolute;
         top: 650px;
-        right: 500px;
+        right: 490px;
         font-family: "Georgia", serif;
+        height: 20px;
+    }
+    
+    #input:focus {
+        background-color: #dbdbdd;
     }
 
 `;
@@ -58,14 +89,14 @@ function App() {
     <div>
       <Global styles={globalStyles} />
       <div>
-        <button id ="copyfilepath" onClick={() => openFileSelector()}>Copy file path</button>
+        <button id ="upload" onClick={() => openFileSelector()}>Upload</button>
         <form onSubmit={(e) => {
           e.preventDefault();
           setOutput(encodeURIComponent(url));
         }}>
           <div id="box_upload">
             <input id="input" value={url} onInput={e => setUrl(e.target.value)} />
-            <button id ="upload" type="submit">Upload</button>
+            <button id ="copyfilepath" type="submit">Copy file path</button>
           </div>
         </form>
         {console.log(output)}

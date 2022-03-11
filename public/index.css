@@ -91,19 +91,6 @@ img {
     font-family: "Georgia", serif;
 }
 
-#box_drag {
-    position: absolute;
-    top: 600px;
-    right: 400px;
-}
-
-#dragdrop {
-    color: white;
-    text-align: center;
-    margin-top: 0;
-    font-family: "Georgia", serif;
-}
-
 #box_uploadDesc {
     margin-top: 0;
     position: absolute;
