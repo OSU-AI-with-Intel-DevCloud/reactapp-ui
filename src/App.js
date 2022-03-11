@@ -17,6 +17,11 @@ const globalStyles = css`
     font-weight: 300;
     margin: 0;
   }
+    #submit {
+        position: absolute;
+        top: 500px;
+        right: 15px;
+}
 `;
 function App() {
   const [openFileSelector, { filesContent, loading, errors }] = useFilePicker({
@@ -32,7 +37,7 @@ function App() {
   return (
     <div>
       <Global styles={globalStyles} />
-      <div>
+      <div id="submit">
         <button onClick={() => openFileSelector()}>Copy file path</button>
         <form onSubmit={(e) => {
           e.preventDefault();

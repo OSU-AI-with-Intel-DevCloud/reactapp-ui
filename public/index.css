@@ -16,31 +16,52 @@ img {
      width: 1150px;
 }
 
-#title {
-    color: white;
-    text-align: left;
+#box_title {
+    width: 700px;
     position: absolute;
-    margin-top: 0;
-    top: 150px;
+    top: 10px;
     left: 50px;
 }
 
-#about {
-    top: 80px;
-      right: 15px;
-      font-weight: bold;
-      text-align: right;
+#title {
     color: white;
-    position: absolute;
+    font-size: 75px;
+    text-align: center;
 }
 
-#credits {
+#box_aboutus{
+    height:200px;
+    position: absolute;
+    top: 650px;
+    left: 15px;
+    font-weight: bold;
+    width: 400px;
+}
+
+#aboutus {
+    height: 100%;
+    width: 100%;
+    color: white;
     text-align: left;
+}
+
+#box_credits {
     position: absolute;
     margin-top: 0;
     top: 500px;
     left: 0px;
+    width: 300px;
+}
+
+#credits {
+    text-align: left;
     color: white;
+}
+
+#box_drag {
+    position: absolute;
+    top: 500px;
+    right: 200px;
 }
 
 #dragdrop {
@@ -49,13 +70,19 @@ img {
     margin-top: 0;
 }
 
-#upload_description{
-    text-align: right;
+#box_uploadDesc {
     margin-top: 0;
     position: absolute;
-    top: 700px;
+    top: 600px;
     right: 0px;
+    height:100px;
+    width: 400px;
+    text-align: center;
+}
+
+#uploadDesc{
     color: white;
+    overflow-wrap: break-word;
 }
 
 
