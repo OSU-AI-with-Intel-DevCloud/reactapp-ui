@@ -1,13 +1,13 @@
 body {
-    background-color: #565656;
+    background-color: #3f3f43;
 }
 
 img {
     position: absolute;
     top: 0px;
     right: 0px;
-    height: 600px;
-    width: 1150px;
+    height: 650px;
+    width: 1100px;
     image-resolution: 700dpi;
 }
 
@@ -19,20 +19,33 @@ img {
 #box_title {
     width: 700px;
     position: absolute;
-    top: 10px;
-    left: 50px;
+    top: 5px;
+    left: 100px;
 }
 
 #title {
     color: white;
     font-size: 75px;
-    text-align: center;
+    text-align: left;
+    font-family: "Georgia", serif;
+}
+
+#background-aboutus {
+    height: 140px;
+    width: 700px;
+    position: absolute;
+    background-color: #b5b5ba;
+    opacity: 0.6;
+    left: 20px;
+    top: 620px;
 }
 
 #box_aboutus{
     height:200px;
     position: absolute;
-    top: 550px;
+    top: 0px;
+    left: 0px;
+    top: 600px;
     left: 15px;
     width: 600px;
 }
@@ -43,12 +56,13 @@ img {
     color: white;
     text-align: left;
     font-size: 30px;
+    font-family: "Georgia", serif;
 }
 
 #box-second_section {
     height:200px;
     position: absolute;
-    top: 590px;
+    top: 640px;
     left: 15px;
     width: 600px;
 }
@@ -59,13 +73,14 @@ img {
     color: white;
     text-align: left;
     font-size: 25px;
+    font-family: "Georgia", serif;
 }
 
 #box_credits {
     position: absolute;
     margin-top: 0;
     top: 400px;
-    left: 0px;
+    left: 15px;
     width: 250px;
 }
 
@@ -73,33 +88,36 @@ img {
     text-align: left;
     color: white;
     font-size: 10px;
+    font-family: "Georgia", serif;
 }
 
 #box_drag {
     position: absolute;
-    top: 500px;
-    right: 200px;
+    top: 600px;
+    right: 400px;
 }
 
 #dragdrop {
     color: white;
     text-align: center;
     margin-top: 0;
+    font-family: "Georgia", serif;
 }
 
 #box_uploadDesc {
     margin-top: 0;
     position: absolute;
-    top: 600px;
-    right: 0px;
+    top: 700px;
+    right: 10px;
     height:100px;
-    width: 400px;
-    text-align: center;
+    width: 700px;
 }
 
 #uploadDesc{
     color: white;
-    overflow-wrap: break-word;
+    text-align: left;
+    font-family: "Georgia", serif;
+    font-size: 15px;
 }
 
 

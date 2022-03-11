@@ -17,11 +17,31 @@ const globalStyles = css`
     font-weight: 300;
     margin: 0;
   }
-    #submit {
+    #copyfilepath {
         position: absolute;
-        top: 500px;
-        right: 15px;
-}
+        top: 650px;
+        right: 400px;
+        font-family: "Georgia", serif;
+    }
+    
+    #upload {
+        position: absolute;
+        right: 0px;
+        top: 630px;
+        width: 400px;
+        height: 70px;
+        background-color: #66676d;
+        color: white;
+        font-family: "Georgia", serif;
+    }
+    
+    #input {
+        position: absolute;
+        top: 650px;
+        right: 500px;
+        font-family: "Georgia", serif;
+    }
+
 `;
 function App() {
   const [openFileSelector, { filesContent, loading, errors }] = useFilePicker({
@@ -37,14 +57,16 @@ function App() {
   return (
     <div>
       <Global styles={globalStyles} />
-      <div id="submit">
-        <button onClick={() => openFileSelector()}>Copy file path</button>
+      <div>
+        <button id ="copyfilepath" onClick={() => openFileSelector()}>Copy file path</button>
         <form onSubmit={(e) => {
           e.preventDefault();
           setOutput(encodeURIComponent(url));
         }}>
-          <input value={url} onInput={e => setUrl(e.target.value)} />
-          <button type="submit">Upload</button>
+          <div id="box_upload">
+            <input id="input" value={url} onInput={e => setUrl(e.target.value)} />
+            <button id ="upload" type="submit">Upload</button>
+          </div>
         </form>
         {console.log(output)}
         <div>{result}</div>
