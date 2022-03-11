@@ -6,7 +6,7 @@ img {
     position: absolute;
     top: 0px;
     right: 0px;
-    height: 570px;
+    height: 600px;
     width: 1150px;
     image-resolution: 700dpi;
 }
@@ -32,10 +32,9 @@ img {
 #box_aboutus{
     height:200px;
     position: absolute;
-    top: 650px;
+    top: 550px;
     left: 15px;
-    font-weight: bold;
-    width: 400px;
+    width: 600px;
 }
 
 #aboutus {
@@ -43,19 +42,37 @@ img {
     width: 100%;
     color: white;
     text-align: left;
+    font-size: 30px;
+}
+
+#box-second_section {
+    height:200px;
+    position: absolute;
+    top: 590px;
+    left: 15px;
+    width: 600px;
+}
+
+#second_section {
+    height: 100%;
+    width: 100%;
+    color: white;
+    text-align: left;
+    font-size: 25px;
 }
 
 #box_credits {
     position: absolute;
     margin-top: 0;
-    top: 500px;
+    top: 400px;
     left: 0px;
-    width: 300px;
+    width: 250px;
 }
 
 #credits {
     text-align: left;
     color: white;
+    font-size: 10px;
 }
 
 #box_drag {
