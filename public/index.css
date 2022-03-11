@@ -1,0 +1,61 @@
+body {
+    background-color: #565656;
+}
+
+img {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    height: 570px;
+    width: 1150px;
+}
+
+#picture {
+    height: 570px;
+     width: 1150px;
+}
+
+#title {
+    color: white;
+    text-align: left;
+    position: absolute;
+    margin-top: 0;
+    top: 150px;
+    left: 50px;
+}
+
+#about {
+    top: 80px;
+      right: 15px;
+      font-weight: bold;
+      text-align: right;
+    color: white;
+    position: absolute;
+}
+
+#credits {
+    text-align: left;
+    position: absolute;
+    margin-top: 0;
+    top: 500px;
+    left: 0px;
+    color: white;
+}
+
+#dragdrop {
+    color: white;
+    text-align: center;
+    margin-top: 0;
+}
+
+#upload_description{
+    text-align: right;
+    margin-top: 0;
+    position: absolute;
+    top: 700px;
+    right: 0px;
+    color: white;
+}
+
+
+
