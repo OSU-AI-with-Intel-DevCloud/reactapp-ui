@@ -1,9 +1,9 @@
 /** @jsxImportSource @emotion/react */
 
-import React, { useState } from "react";
-import { useFilePicker } from "use-file-picker";
+import React, { useState, useEffect } from "react";
 import Spinner from "./components/Spinner";
 import useResults from "./hooks/useResults";
+import useFile from "./hooks/useFile";
 // https://dev.to/nagatodev/how-to-connect-flask-to-reactjs-1k8i
 
 import { Global, css } from "@emotion/react";
@@ -79,26 +79,31 @@ const results = css`
 `;
 
 function App() {
-  const [openFileSelector, { filesContent, loading, errors }] = useFilePicker({
-    multiple: false,
-    readAs: "DataURL",
-    accept: ".txt, .mp4",
-  });
   const [url, setUrl] = useState("");
   const [output, setOutput] = useState("");
   const [result, isLoading, error] = useResults(output);
-  if (errors.length > 0) return <p>Error!</p>;
-  if (loading) return <Spinner />;
+  const [click, setClick] = useState("");
+  const [resultPath, isLoadingPath, errorPath] = useFile(click);
+  useEffect(() => {
+    setUrl(resultPath);
+  }, [resultPath]);
   return (
     <div>
       <Global styles={globalStyles} />
       <div>
-        <button id="upload" onClick={() => openFileSelector()}>
-          Upload
+        <button
+          id="upload"
+          onClick={(e) => {
+            e.preventDefault();
+            setClick(Date.now());
+          }}
+        >
+          Select File
         </button>
         <form
           onSubmit={(e) => {
             e.preventDefault();
+            console.log(url);
             setOutput(encodeURIComponent(url));
           }}
         >
@@ -109,7 +114,7 @@ function App() {
               onInput={(e) => setUrl(e.target.value)}
             />
             <button id="copyfilepath" type="submit">
-              Copy file path
+              Upload
             </button>
           </div>
         </form>
