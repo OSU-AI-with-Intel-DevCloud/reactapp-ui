@@ -1,7 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
 import React, { useState, useEffect } from "react";
-import ReactPlayer from "react-player";
 import Spinner from "./components/Spinner";
 import useResults from "./hooks/useResults";
 import useFile from "./hooks/useFile";
@@ -88,9 +87,6 @@ function App() {
   useEffect(() => {
     setUrl(resultPath);
   }, [resultPath]);
-
-  if (error.length > 0) return <p>Error!</p>;
-  if (isLoading) return <Spinner />;
   return (
     <div>
       <Global styles={globalStyles} />
@@ -124,7 +120,6 @@ function App() {
         </form>
         {console.log(output)}
         <div css={results}>{result}</div>
-        <ReactPlayer playing url={resultPath} />
       </div>
     </div>
   );
