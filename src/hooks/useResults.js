@@ -28,7 +28,14 @@ function useResults(path) {
       if (!ignore) {
         setLoading(false);
         setError(responseBody.message == 0 ? false : responseBody.message);
-        setResult(responseBody.body || []);
+        setResult(
+          [
+            responseBody.b1,
+            responseBody.b2,
+            responseBody.b3,
+            responseBody.b4,
+          ] || []
+        );
       }
     }
     if (path) {

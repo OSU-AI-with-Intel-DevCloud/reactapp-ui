@@ -1,2 +1,0 @@
-filename,label
-metahuman.mp4,0.5971554517745972
