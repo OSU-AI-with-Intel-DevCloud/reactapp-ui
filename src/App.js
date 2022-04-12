@@ -75,6 +75,7 @@ const globalStyles = css`
 
 const results = css`
   margin-left: 40px;
+  margin-top: 200px;
   color: white;
 `;
 
@@ -119,7 +120,13 @@ function App() {
           </div>
         </form>
         {console.log(output)}
-        <div css={results}>{result}</div>
+        <div css={results}>
+          <b>Results!</b>
+          <div>{result[0]}</div>
+          <div>{result[1]}</div>
+          <div>{result[2]}</div>
+          <div>{result[3]}</div>
+        </div>
       </div>
     </div>
   );

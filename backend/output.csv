@@ -1,0 +1,3 @@
+filename,label,inference
+animated-characters-2.mp4,0.04659133963286877,Efficientnet Single Model
+animated-characters-2.mp4,0.32985377311706543,ResNeXt50 Classifier
