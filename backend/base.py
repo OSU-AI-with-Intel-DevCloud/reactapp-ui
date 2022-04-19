@@ -31,7 +31,7 @@ def get_results(path: str):
         line_count = 0
         for row in csv_reader:
             if line_count == 1:
-                response_1 += str(row[2]) + " results for " + str(row[0]) + " -- " + str(row[1])
+                response_1 += str(row[2]) + " results for " + str(row[0]) + " -- " + str(row[1]) + " -- Time elapsed: " + str(row[3]) + " seconds"
                 temp_prob = float(row[1])
                 if temp_prob < 0.3:
                     response_2 += "This low probability indicates a high likelihood that this is a real image"
@@ -41,7 +41,7 @@ def get_results(path: str):
                     response_2 += "This high probability indicates a high likelihood that this image is a deepfake"
             
             if line_count == 2:
-                response_3 += str(row[2]) + " results for " + str(row[0]) + " -- " + str(row[1])
+                response_3 += str(row[2]) + " results for " + str(row[0]) + " -- " + str(row[1]) + " -- Time elapsed: " + str(row[3]) + " seconds"
                 temp_prob = float(row[1])
                 if temp_prob < 0.3:
                     response_4 += "This low probability indicates a high likelihood that this is a real image"
@@ -52,10 +52,12 @@ def get_results(path: str):
             line_count += 1
     csv_file.close()
     r = {"b1": response_1, "b2": response_2, "b3": response_3, "b4": response_4}
+    #save results in text file here
     return json.dumps(r)
     
 import tkinter as tk
 from tkinter import filedialog
+#import vlc
 
 @api.route('/path')
 def get_path():
@@ -66,5 +68,7 @@ def get_path():
     root.destroy()
 
     print(file_path)
+    #media = vlc.MediaPlayer(file_path)
+    #send image file over
 
     return json.dumps(file_path)

@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Spinner from "./components/Spinner";
+import ReactPlayer from "react-player";
 import useResults from "./hooks/useResults";
 import useFile from "./hooks/useFile";
 // https://dev.to/nagatodev/how-to-connect-flask-to-reactjs-1k8i
@@ -127,6 +128,7 @@ function App() {
           <div>{result[2]}</div>
           <div>{result[3]}</div>
         </div>
+        {isLoading ? <Spinner></Spinner> : <div></div>}
       </div>
     </div>
   );
