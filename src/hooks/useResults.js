@@ -27,7 +27,7 @@ function useResults(path) {
       }
       if (!ignore) {
         setLoading(false);
-        setError(responseBody.message == 0 ? false : responseBody.message);
+        setError(responseBody.message === 0 ? false : responseBody.message);
         setResult(
           [
             responseBody.b1,

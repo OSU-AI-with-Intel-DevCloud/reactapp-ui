@@ -27,13 +27,17 @@ function useFile(click) {
       }
       if (!ignore) {
         setLoading(false);
-        setError(responseBody.message == 0 ? false : responseBody.message);
+        setError(responseBody.message === 0 ? false : responseBody.message);
         const filePath = responseBody.replaceAll("/", "\\");
         setResult(filePath);
       }
     }
     if (click) {
-      fetchSearchResults();
+      console.log(click);
+      console.log(Date.now());
+      if (Date.now() - click < 100) {
+        fetchSearchResults();
+      }
     }
     return () => {
       controller.abort();
