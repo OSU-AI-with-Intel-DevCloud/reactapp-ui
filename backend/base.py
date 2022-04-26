@@ -1,4 +1,5 @@
 from email.quoprimime import unquote
+from genericpath import exists
 from urllib import response
 from flask import Flask
 
@@ -52,12 +53,13 @@ def get_results(path: str):
             line_count += 1
     csv_file.close()
     r = {"b1": response_1, "b2": response_2, "b3": response_3, "b4": response_4}
+    
     #save results in text file here
     return json.dumps(r)
     
 import tkinter as tk
 from tkinter import filedialog
-#import vlc
+import cv2
 
 @api.route('/path')
 def get_path():
@@ -67,8 +69,11 @@ def get_path():
     file_path = filedialog.askopenfilename()
     root.destroy()
 
-    print(file_path)
-    #media = vlc.MediaPlayer(file_path)
     #send image file over
+    if (exists(file_path)):
+        vidcap = cv2.VideoCapture(file_path)
+        success, image = vidcap.read()
+        if success:
+            cv2.imwrite("../src/components/first_frame.jpg", image)  # save frame as JPEG file
 
     return json.dumps(file_path)

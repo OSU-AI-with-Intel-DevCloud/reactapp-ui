@@ -1,6 +1,6 @@
 /** @jsxImportSource @emotion/react */
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Spinner from "./components/Spinner";
 import ReactPlayer from "react-player";
 import useResults from "./hooks/useResults";
@@ -86,6 +86,7 @@ function App() {
   const [result, isLoading, error] = useResults(output);
   const [click, setClick] = useState("");
   const [resultPath, isLoadingPath, errorPath] = useFile(click);
+  const isMounted = useRef(false);
   useEffect(() => {
     setUrl(resultPath);
   }, [resultPath]);
@@ -105,7 +106,6 @@ function App() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            console.log(url);
             setOutput(encodeURIComponent(url));
           }}
         >
@@ -128,6 +128,7 @@ function App() {
           <div>{result[2]}</div>
           <div>{result[3]}</div>
         </div>
+        <img src={require("./components/first_frame.jpg")} />
         {isLoading ? <Spinner></Spinner> : <div></div>}
       </div>
     </div>
