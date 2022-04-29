@@ -12,7 +12,7 @@ function useResults(path) {
       let responseBody = {};
       setLoading(true);
       try {
-        const response = await fetch(`/results/${path}`, {
+        const response = await fetch(`/results/${path.path}`, {
           signal: controller.signal,
         });
         responseBody = await response.json();
@@ -34,12 +34,24 @@ function useResults(path) {
             responseBody.b2,
             responseBody.b3,
             responseBody.b4,
+            responseBody.b5,
+            responseBody.b6,
+            responseBody.b7,
+            responseBody.b8,
+            responseBody.b9,
+            responseBody.b10,
+            responseBody.b11,
+            responseBody.b12,
           ] || []
         );
       }
     }
     if (path) {
-      fetchSearchResults();
+      console.log(path);
+      console.log(Date.now());
+      if (Date.now() - path.time < 100) {
+        fetchSearchResults();
+      }
     }
     return () => {
       controller.abort();

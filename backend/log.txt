@@ -1,0 +1,20 @@
+testing1
+testing2
+testing3
+testing4
+ResNeXt50
+ResNeXt50
+Efficientnet
+Efficientnet
+a
+b
+C
+d
+Efficientnet Single Model results for metahuman.mp4 -- 0.597 -- Time elapsed: 1.482 seconds
+This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
+ResNeXt50 Classifier results for metahuman.mp4 -- 0.212 -- Time elapsed: 1.645 seconds
+This low probability indicates a high likelihood that this is a real image
+Efficientnet Single Model results for metahuman.mp4 -- 0.597 -- Time elapsed: 1.482 seconds
+This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
+ResNeXt50 Classifier results for metahuman.mp4 -- 0.212 -- Time elapsed: 1.645 seconds
+This low probability indicates a high likelihood that this is a real image
