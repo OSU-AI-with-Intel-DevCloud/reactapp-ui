@@ -82,7 +82,7 @@ const results = css`
 
 function App() {
   const [url, setUrl] = useState("");
-  const [output, setOutput] = useState("");
+  const [output, setOutput] = useState({ path: "", time: "" });
   const [result, isLoading, error] = useResults(output);
   const [click, setClick] = useState("");
   const [resultPath, isLoadingPath, errorPath] = useFile(click);
@@ -106,7 +106,7 @@ function App() {
         <form
           onSubmit={(e) => {
             e.preventDefault();
-            setOutput(encodeURIComponent(url));
+            setOutput({ path: encodeURIComponent(url), time: Date.now() });
           }}
         >
           <div id="box_upload">
@@ -127,6 +127,16 @@ function App() {
           <div>{result[1]}</div>
           <div>{result[2]}</div>
           <div>{result[3]}</div>
+          <div>---</div>
+          <div>{result[4]}</div>
+          <div>{result[5]}</div>
+          <div>{result[6]}</div>
+          <div>{result[7]}</div>
+          <div>---</div>
+          <div>{result[8]}</div>
+          <div>{result[9]}</div>
+          <div>{result[10]}</div>
+          <div>{result[11]}</div>
         </div>
         <img src={require("./components/first_frame.jpg")} />
         {isLoading ? <Spinner></Spinner> : <div></div>}
