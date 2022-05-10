@@ -20,7 +20,7 @@ def get_results(path: str):
     file_path = pathlib.PureWindowsPath(urllib.parse.unquote(path))
     # this switches slash direction for windows, for mac use p.as_posix()
     p = subprocess.Popen(f"scp {file_path} devcloud:deepfake/input/combined", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    time.sleep(10)
+    time.sleep(12)
     p2 = subprocess.Popen("scp devcloud:deepfake/output/submission.csv output.csv", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     time.sleep(4)
     responses = [""] * 12
