@@ -8,77 +8,154 @@ import useFile from "./hooks/useFile";
 // https://dev.to/nagatodev/how-to-connect-flask-to-reactjs-1k8i
 
 import { Global, css } from "@emotion/react";
-
 const globalStyles = css`
   @import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400&display=swap");
 
   body {
-    font-family: "Source Sans Pro", sans-serif;
-    font-weight: 300;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
     margin: 0;
   }
-  #upload {
+
+  #select {
     position: absolute;
     right: 0px;
-    top: 630px;
-    width: 400px;
-    height: 70px;
+    top: 820px;
+    width: 300px;
+    height: 80px;
     background-color: #66676d;
     color: white;
-    font-family: "Georgia", serif;
+    font-size: 20px;
+  }
+
+  #select:hover {
+    background-color: #dbdbdd;
+    cursor: pointer;
+    color: black;
+  }
+
+  #select:active {
+    background-color: #dbdbdd;
+  }
+
+  #upload {
+    position: absolute;
+    top: 855px;
+    right: 300px;
+    font-size: 20px;
+    background-color: #66676d;
+    color: white;
+    width: 150px;
+    height: 40px;
   }
 
   #upload:hover {
     background-color: #dbdbdd;
     cursor: pointer;
-    width: 400px;
-    height: 70px;
-    position: fixed;
-    color: black;
-  }
-
-  #upload:active {
-    background-color: #dbdbdd;
-  }
-
-  #copyfilepath {
-    position: absolute;
-    top: 650px;
-    right: 400px;
-    font-family: "Georgia", serif;
-    background-color: #66676d;
-    color: white;
-    width: 100px;
-    height: 30px;
-  }
-
-  #copyfilepath:hover {
-    background-color: #dbdbdd;
-    cursor: pointer;
-    width: 100px;
-    height: 30px;
-    position: fixed;
     color: black;
   }
 
   #input {
     position: absolute;
-    top: 651px;
-    right: 500px;
-    font-family: "Georgia", serif;
-    height: 20px;
+    top: 855px;
+    right: 450px;
+    font-size:20px;
+    height: 30px;
+    width: 305px;
   }
 
   #input:focus {
     background-color: #dbdbdd;
   }
+    
+/* The Overlay (background) */
+.overlay {
+  /* Height & width depends on how you want to reveal the overlay (see JS below) */
+  height: 100%;
+  width: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  background-color: rgb(255,255,255); /* Black fallback color */
+  background-color: rgba(255,255,255, 0.95); /* Black w/opacity */
+  overflow-x: hidden; /* Disable horizontal scroll */
+  transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
+}
+.img_desc {
+    position: relative;
+    top: 100px;
+    margin-top: 0px;
+    text-align: center;
+    font-size:40px;
+    padding-bottom: 30px;
+}
+
+#snapshot {
+  position: relative;
+    top: 100px;
+    left: 250px;
+    margin-top: 0px;
+}
+
+/* Position the content inside the overlay */
+#overlay-content {
+    position: relative;
+    top: 150px;
+    text-align: center;
+    color: black;
+    font-size:20px;
+}
+
+#spin {
+    position: relative;
+    top: 120px;
+    text-align: center;
+}
+
+/* The navigation links inside the overlay */
+.overlay a {
+  padding: 8px;
+  text-decoration: none;
+  font-size: 36px;
+  color: #818181;
+  display: block; /* Display block instead of inline */
+  transition: 0.3s; /* Transition effects on hover (color) */
+}
+
+/* When you mouse over the navigation links, change their color */
+.overlay a:hover, .overlay a:focus {
+  color: blue;
+}
+
+/* Position the close button (top right corner) */
+.overlay .closebtn {
+  position: absolute;
+  top: 5px;
+  right: 45px;
+  font-size: 60px;
+    
+}
+
+/* When the height of the screen is less than 450 pixels, change the font-size of the links and position the close button again, so they don't overlap
+@media screen and (max-height: 450px) {
+  .overlay a {font-size: 20px}
+  .overlay .closebtn {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+} dont think this is needed */
 `;
 
-const results = css`
-  margin-left: 40px;
-  margin-top: 200px;
-  color: white;
-`;
+function openNav() {
+  document.getElementById("myNav").style.width = "100%";
+}
+
+/* Close when someone clicks on the "x" symbol inside the overlay */
+function closeNav() {
+  document.getElementById("myNav").style.width = "0%";
+}
 
 function App() {
   const [url, setUrl] = useState("");
@@ -95,10 +172,11 @@ function App() {
       <Global styles={globalStyles} />
       <div>
         <button
-          id="upload"
+          id="select"
           onClick={(e) => {
             e.preventDefault();
             setClick(Date.now());
+            openNav();
           }}
         >
           Select File
@@ -107,6 +185,7 @@ function App() {
           onSubmit={(e) => {
             e.preventDefault();
             setOutput({ path: encodeURIComponent(url), time: Date.now() });
+            openNav()
           }}
         >
           <div id="box_upload">
@@ -115,32 +194,34 @@ function App() {
               value={url}
               onInput={(e) => setUrl(e.target.value)}
             />
-            <button id="copyfilepath" type="submit">
-              Upload
-            </button>
+            <button id="upload" type="submit" onclick="openNav()">Upload</button>
           </div>
         </form>
-        {console.log(output)}
-        <div css={results}>
-          <b>Results!</b>
-          <div>{result[0]}</div>
-          <div>{result[1]}</div>
-          <div>{result[2]}</div>
-          <div>{result[3]}</div>
-          <div>---</div>
-          <div>{result[4]}</div>
-          <div>{result[5]}</div>
-          <div>{result[6]}</div>
-          <div>{result[7]}</div>
-          <div>---</div>
-          <div>{result[8]}</div>
-          <div>{result[9]}</div>
-          <div>{result[10]}</div>
-          <div>{result[11]}</div>
+        <div id="myNav" class="overlay">
+          <a href="javascript:void(0)" class="closebtn" onClick={(e) => {closeNav();}}>&times;</a>
+          {console.log(output)}
+          <div class="img_desc">Snapshot of the video:</div>
+          <img id="snapshot" src={require("./components/first_frame.jpg")} />
+          <div id="spin">{isLoading ? <Spinner></Spinner> : <div></div>} </div>
+          <div id="overlay-content">
+            <div>Results</div>
+            <div>{result[0]}</div>
+            <div>{result[1]}</div>
+            <div>{result[2]}</div>
+            <div>{result[3]}</div>
+            <div>---</div>
+            <div>{result[4]}</div>
+            <div>{result[5]}</div>
+            <div>{result[6]}</div>
+            <div>{result[7]}</div>
+            <div>---</div>
+            <div>{result[8]}</div>
+            <div>{result[9]}</div>
+            <div>{result[10]}</div>
+            <div>{result[11]}</div>
         </div>
-        <img src={require("./components/first_frame.jpg")} />
-        {isLoading ? <Spinner></Spinner> : <div></div>}
       </div>
+     </div>
     </div>
   );
 }

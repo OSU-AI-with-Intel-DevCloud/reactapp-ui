@@ -8,7 +8,7 @@ import styled from '@emotion/styled/macro';
 
 function Spinner({ size, color }) {
     size = size || 12;
-    color = color || '#333';
+    color = color || '#090';
     const Spinner = styled.div`
         display: inline-block;
         text-align: center;

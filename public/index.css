@@ -1,14 +1,17 @@
 /* css for index.html in the main public folder */
 body {
-  background-color: #3f3f43;
+  background-color: #37474f;
+  overflow-x: hidden; /* Disable horizontal scroll */
+  overflow-y: hidden;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 img {
   position: absolute;
   top: 0px;
   right: 0px;
-  height: 650px;
-  width: 1100px;
+  height: 856px;
+  width: 1400px;
   image-resolution: 700dpi;
 }
 
@@ -21,32 +24,21 @@ img {
   width: 700px;
   position: absolute;
   top: 5px;
-  left: 100px;
+  left: 250px;
 }
 
 #title {
   color: white;
-  font-size: 75px;
+  font-size: 95px;
   text-align: left;
-  font-family: "Georgia", serif;
-}
-
-#background-aboutus {
-  height: 130px;
-  width: 700px;
-  position: absolute;
-  background-color: #b5b5ba;
-  opacity: 0.6;
-  left: 20px;
-  top: 620px;
+  
 }
 
 #box_aboutus {
   height: 200px;
   position: absolute;
-  top: 0px;
   left: 0px;
-  top: 600px;
+  top: 800px;
   left: 15px;
   width: 600px;
 }
@@ -56,16 +48,16 @@ img {
   width: 100%;
   color: white;
   text-align: left;
-  font-size: 28px;
-  font-family: "Georgia", serif;
+  font-size: 40px;
+  
 }
 
 #box-second_section {
   height: 200px;
   position: absolute;
-  top: 640px;
+  top: 870px;
   left: 15px;
-  width: 600px;
+  width: 700px;
 }
 
 #second_section {
@@ -73,36 +65,33 @@ img {
   width: 100%;
   color: white;
   text-align: left;
-  font-size: 20px;
-  font-family: "Georgia", serif;
+  font-size: 25px;
 }
 
 #box_credits {
   position: absolute;
   margin-top: 0;
-  top: 400px;
-  left: 15px;
-  width: 250px;
+  top: 450px;
+  left: 60px;
+  width: 430px;
 }
 
 #credits {
   text-align: left;
   color: white;
-  font-size: 10px;
-  font-family: "Georgia", serif;
+  font-size: 23px;
 }
 
 #box_uploadDesc {
   position: absolute;
-  top: 700px;
+  top: 900px;
   right: 0px;
   height: 100px;
-  width: 680px;
+  width: 800px;
 }
 
 #uploadDesc {
   color: white;
   text-align: left;
-  font-family: "Georgia", serif;
-  font-size: 15px;
+  font-size: 20px;
 }
