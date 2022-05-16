@@ -9,72 +9,46 @@ Efficientnet
 a
 b
 C
-d
-Efficientnet Single Model results for metahuman.mp4 -- 0.597 -- Time elapsed: 1.482 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for metahuman.mp4 -- 0.212 -- Time elapsed: 1.645 seconds
-This low probability indicates a high likelihood that this is a real image
-Efficientnet Single Model results for metahuman.mp4 -- 0.597 -- Time elapsed: 1.482 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for metahuman.mp4 -- 0.212 -- Time elapsed: 1.645 seconds
-This low probability indicates a high likelihood that this is a real image
-Efficientnet Single Model results for metahuman.mp4 -- 0.597 -- Time elapsed: 1.482 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for metahuman.mp4 -- 0.212 -- Time elapsed: 1.645 seconds
-This low probability indicates a high likelihood that this is a real image
-Efficientnet Single Model results for metahuman.mp4 -- 0.597 -- Time elapsed: 1.482 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for metahuman.mp4 -- 0.212 -- Time elapsed: 1.645 seconds
-This low probability indicates a high likelihood that this is a real image
-Efficientnet Single Model results for deepfake_ex.mp4 -- 0.5 -- Time elapsed: 0.223 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for deepfake_ex.mp4 -- 0.5 -- Time elapsed: 0.231 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-Efficientnet Single Model results for deepfake_ex.mp4 -- 0.5 -- Time elapsed: 0.223 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for deepfake_ex.mp4 -- 0.5 -- Time elapsed: 0.231 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-Efficientnet Single Model results for masktest.mp4 -- 0.37 -- Time elapsed: 1.592 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for masktest.mp4 -- 0.071 -- Time elapsed: 2.074 seconds
-This low probability indicates a high likelihood that this is a real image
-Efficientnet Single Model results for animated-characters.mp4 -- 0.047 -- Time elapsed: 1.558 seconds
-This low probability indicates a high likelihood that this is a real image
-ResNeXt50 Classifier results for animated-characters.mp4 -- 0.472 -- Time elapsed: 2.018 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-Efficientnet Single Model results for animated-characters-2.mp4 -- 0.047 -- Time elapsed: 1.605 seconds
-This low probability indicates a high likelihood that this is a real image
-ResNeXt50 Classifier results for animated-characters-2.mp4 -- 0.33 -- Time elapsed: 1.969 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-Efficientnet Single Model results for masktest.mp4 -- 0.37 -- Time elapsed: 1.549 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for masktest.mp4 -- 0.071 -- Time elapsed: 2.047 seconds
-This low probability indicates a high likelihood that this is a real image
-Efficientnet Single Model results for masktest.mp4 -- 0.37 -- Time elapsed: 1.538 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for masktest.mp4 -- 0.071 -- Time elapsed: 2.038 seconds
-This low probability indicates a high likelihood that this is a real image
-Efficientnet Single Model results for test1.mp4 -- 0.5 -- Time elapsed: 0.007 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for test1.mp4 -- 0.5 -- Time elapsed: 0.046 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-Efficientnet Single Model results for test1.mp4 -- 0.5 -- Time elapsed: 0.006 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for test1.mp4 -- 0.5 -- Time elapsed: 0.004 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-Efficientnet Single Model results for animated-characters.mp4 -- 0.047 -- Time elapsed: 1.545 seconds
-This low probability indicates a high likelihood that this is a real image
-ResNeXt50 Classifier results for animated-characters.mp4 -- 0.472 -- Time elapsed: 2.058 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-Efficientnet Single Model results for metahuman.mp4 -- 0.597 -- Time elapsed: 1.684 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for metahuman.mp4 -- 0.212 -- Time elapsed: 2.122 seconds
-This low probability indicates a high likelihood that this is a real image
-Efficientnet Single Model results for metahuman.mp4 -- 0.597 -- Time elapsed: 1.643 seconds
-This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
-ResNeXt50 Classifier results for metahuman.mp4 -- 0.212 -- Time elapsed: 2.132 seconds
-This low probability indicates a high likelihood that this is a real image
-Efficientnet Single Model results for animated-characters.mp4 -- 0.047 -- Time elapsed: 1.547 seconds
 This low probability indicates a high likelihood that this is a real image
 ResNeXt50 Classifier results for animated-characters.mp4 -- 0.472 -- Time elapsed: 2.019 seconds
 This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
+Efficientnet Single Model results for masktest.mp4 -- 0.37 -- Time elapsed: 1.468 seconds
+This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
+ResNeXt50 Classifier results for masktest.mp4 -- 0.071 -- Time elapsed: 1.64 seconds
+This low probability indicates a high likelihood that this is a real image
+Efficientnet Single Model results for masktest.mp4 -- 0.37 -- Time elapsed: 1.467 seconds
+This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
+ResNeXt50 Classifier results for masktest.mp4 -- 0.071 -- Time elapsed: 1.68 seconds
+This low probability indicates a high likelihood that this is a real image
+Efficientnet Single Model results for <b>deepfake_ex.mp4</b> -- 1.0 -- Time elapsed: 3.339 seconds
+This high probability indicates a high likelihood that this image is a deepfake
+ResNeXt50 Classifier results for deepfake_ex.mp4 -- 0.789 -- Time elapsed: 2.143 seconds
+This high probability indicates a high likelihood that this image is a deepfake
+<div>Efficientnet Single Model results for deepfake_ex.mp4 -- 1.0 -- Time elapsed: 3.33 seconds</div>
+This high probability indicates a high likelihood that this image is a deepfake
+ResNeXt50 Classifier results for deepfake_ex.mp4 -- 0.789 -- Time elapsed: 2.135 seconds
+This high probability indicates a high likelihood that this image is a deepfake
+<div>Efficientnet Single Model results for deepfake_ex.mp4 -- 1.0 -- Time elapsed: 3.338 seconds</div>
+This high probability indicates a high likelihood that this image is a deepfake
+ResNeXt50 Classifier results for deepfake_ex.mp4 -- 0.789 -- Time elapsed: 2.167 seconds
+This high probability indicates a high likelihood that this image is a deepfake
+<div>Efficientnet Single Model results for deepfake_ex.mp4 -- 1.0 -- Time elapsed: 3.352 seconds</div>
+This high probability indicates a high likelihood that this image is a deepfake
+ResNeXt50 Classifier results for deepfake_ex.mp4 -- 0.789 -- Time elapsed: 2.018 seconds
+This high probability indicates a high likelihood that this image is a deepfake
+Efficientnet Single Model results for deepfake_ex.mp4 -- <b>1.0<b/> -- Time elapsed: 3.316 seconds
+This high probability indicates a high likelihood that this image is a deepfake
+ResNeXt50 Classifier results for deepfake_ex.mp4 -- 0.789 -- Time elapsed: 2.078 seconds
+This high probability indicates a high likelihood that this image is a deepfake
+Efficientnet Single Model results for <b>aagfhgtpmv.mp4</b> -- <b>0.899</b> -- Time elapsed: <b>3.983</b> s
+This high probability indicates a high likelihood that this image is a deepfake
+ResNeXt50 Classifier results for <b>aagfhgtpmv.mp4</b> -- <b>0.833</b> -- Time elapsed: <b>2.224</b> s
+This high probability indicates a high likelihood that this image is a deepfake
+<b>Efficientnet Single Model</b> results for <b>gkutjglghz.mp4</b> -- <b>0.472</b> -- Time elapsed: <b>3.419</b> s
+This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
+<b>ResNeXt50 Classifier</b> results for <b>gkutjglghz.mp4</b> -- <b>0.368</b> -- Time elapsed: <b>2.089</b> s
+This midrange probability indicates that the deepfake detector had issues indicating whether or not this is a real image
+<b>Efficientnet Single Model</b> results for <b>fjrueenjyp.mp4</b> -- <b>1.0</b> -- Time elapsed: <b>3.985</b> s
+This high probability indicates a high likelihood that this image is a deepfake
+<b>ResNeXt50 Classifier</b> results for <b>fjrueenjyp.mp4</b> -- <b>0.996</b> -- Time elapsed: <b>2.125</b> s
+This high probability indicates a high likelihood that this image is a deepfake

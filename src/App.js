@@ -114,14 +114,14 @@ const globalStyles = css`
     top: 10%;
     left: 25%;
     margin-top: 0px;
-    height:50%;
-    width:50%;
+    height: 50%;
+    width: 50%;
   }
 
   /* Position the content inside the overlay */
   #overlay-content {
     position: relative;
-    top: 150px;
+    top: 120px;
     text-align: center;
     color: black;
     font-size: 20px;
@@ -241,20 +241,21 @@ function App() {
           <img id="snapshot" src={require("./components/first_frame.jpg")} />
           <div id="spin">{isLoading ? <Spinner></Spinner> : <div></div>} </div>
           <div id="overlay-content">
-            <div>Results</div>
-            <div>{result[0]}</div>
+            <b>Previous Three Results</b>
+            <div>-----</div>
+            <div dangerouslySetInnerHTML={{ __html: result[0] }} />
             <div>{result[1]}</div>
-            <div>{result[2]}</div>
+            <div dangerouslySetInnerHTML={{ __html: result[2] }} />
             <div>{result[3]}</div>
-            <div>---</div>
-            <div>{result[4]}</div>
+            <div>-----</div>
+            <div dangerouslySetInnerHTML={{ __html: result[4] }} />
             <div>{result[5]}</div>
-            <div>{result[6]}</div>
+            <div dangerouslySetInnerHTML={{ __html: result[6] }} />
             <div>{result[7]}</div>
-            <div>---</div>
-            <div>{result[8]}</div>
+            <div>-----</div>
+            <div dangerouslySetInnerHTML={{ __html: result[8] }} />
             <div>{result[9]}</div>
-            <div>{result[10]}</div>
+            <div dangerouslySetInnerHTML={{ __html: result[10] }} />
             <div>{result[11]}</div>
             <br></br>
           </div>

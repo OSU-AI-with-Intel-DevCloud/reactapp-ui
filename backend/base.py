@@ -20,7 +20,7 @@ def get_results(path: str):
     file_path = pathlib.PureWindowsPath(urllib.parse.unquote(path))
     # this switches slash direction for windows, for mac use p.as_posix()
     p = subprocess.Popen(f"scp {file_path} devcloud:deepfake/input/combined", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    time.sleep(12)
+    time.sleep(13)
     p2 = subprocess.Popen("scp devcloud:deepfake/output/submission.csv output.csv", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
     time.sleep(4)
     responses = [""] * 12
@@ -29,7 +29,7 @@ def get_results(path: str):
         line_count = 0
         for row in csv_reader:
             if line_count == 1:
-                responses[0] += str(row[2]) + " results for " + str(row[0]) + " -- " + str(row[1]) + " -- Time elapsed: " + str(row[3]) + " seconds"
+                responses[0] += "<b>" + str(row[2]) + "</b> results for <b>" + str(row[0]) + "</b> -- <b>" + str(row[1]) + "</b> -- Time elapsed: <b>" + str(row[3]) + "</b> s"
                 temp_prob = float(row[1])
                 if temp_prob < 0.3:
                     responses[1] += "This low probability indicates a high likelihood that this is a real image"
@@ -39,7 +39,7 @@ def get_results(path: str):
                     responses[1] += "This high probability indicates a high likelihood that this image is a deepfake"
             
             if line_count == 2:
-                responses[2] += str(row[2]) + " results for " + str(row[0]) + " -- " + str(row[1]) + " -- Time elapsed: " + str(row[3]) + " seconds"
+                responses[2] += "<b>" + str(row[2]) + "</b> results for <b>" + str(row[0]) + "</b> -- <b>" + str(row[1]) + "</b> -- Time elapsed: <b>" + str(row[3]) + "</b> s"
                 temp_prob = float(row[1])
                 if temp_prob < 0.3:
                     responses[3] += "This low probability indicates a high likelihood that this is a real image"
