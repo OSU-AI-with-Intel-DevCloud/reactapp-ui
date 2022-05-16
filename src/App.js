@@ -96,8 +96,10 @@ const globalStyles = css`
     background-color: rgb(255, 255, 255); /* Black fallback color */
     background-color: rgba(255, 255, 255, 0.95); /* Black w/opacity */
     overflow-x: hidden; /* Disable horizontal scroll */
+    overflow-y: hidden;
     transition: 0.5s; /* 0.5 second transition effect to slide in or slide down the overlay (height or width, depending on reveal) */
   }
+
   .img_desc {
     position: relative;
     top: 100px;
@@ -109,9 +111,11 @@ const globalStyles = css`
 
   #snapshot {
     position: relative;
-    top: 100px;
-    left: 250px;
+    top: 10%;
+    left: 25%;
     margin-top: 0px;
+    height:50%;
+    width:50%;
   }
 
   /* Position the content inside the overlay */
