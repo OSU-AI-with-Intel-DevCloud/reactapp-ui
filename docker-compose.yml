@@ -1,0 +1,61 @@
+# 
+# version: '3.7'
+
+services:
+
+  # client:
+  #     build:
+  #         context: ./frontend
+  #         dockerfile: Dockerfile
+  #     tty: true
+  #     ports:
+  #         - "3000:3000"
+  #     volumes:
+  #         - ./frontend:/app
+  #         - /app/node_modules
+  #     networks:
+  #         - frontend
+
+  mongodb_container:
+    image: mongo:latest
+    container_name: mongodb_container
+    ports:
+      - "27017:27017"
+    environment:
+       MONGO_INITDB_ROOT_USERNAME: "admin"
+       MONGO_INITDB_ROOT_PASSWORD: "admin"
+    volumes:
+      - mongodb_data_container:/data/db
+    # networks:
+    #   - backend
+
+  # api:
+  #   build:
+  #     context: ./backend
+  #     dockerfile: Dockerfile
+  #   ports:
+  #       - "5000:5000"
+  #   # environment:
+  #   #   MONGODB_USERNAME: "admin"
+  #   #   MONGODB_PASSWORD: "admin"
+  #   volumes:
+  #     - appdata:/var/www/
+  #     - ../downloads:/downloads
+  #   depends_on:
+  #     - mongodb_container
+  #   networks:
+  #     - frontend
+  #     - backend
+
+
+# networks:
+#   frontend:
+#     driver: bridge
+#   backend:
+#     driver: bridge
+
+volumes:
+  mongodb_data_container:
+  #   driver: local
+  # appdata:
+  #   driver: local

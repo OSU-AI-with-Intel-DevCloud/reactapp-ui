@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-function useFile(click) {
-  const [resultPath, setResult] = useState([]);
-  const [isLoadingPath, setLoading] = useState(false);
-  const [errorPath, setError] = useState(false);
+function useResults(path) {
+  const [result, setResult] = useState([]);
+  const [isLoading, setLoading] = useState(false);
+  const [error, setError] = useState(false);
 
   useEffect(() => {
     let ignore = false;
@@ -12,8 +12,8 @@ function useFile(click) {
       let responseBody = {};
       setLoading(true);
       try {
-        const response = await fetch(`/path`, {
-          signal: controller.signal,
+        const response = await fetch(`/results/${path.path}`, {
+          signal: controller.signal
         });
         responseBody = await response.json();
         console.log(responseBody);
@@ -28,14 +28,15 @@ function useFile(click) {
       if (!ignore) {
         setLoading(false);
         setError(responseBody.message === 0 ? false : responseBody.message);
-        const filePath = responseBody.replaceAll("/", "\\");
-        setResult(filePath);
+        setResult(
+          responseBody
+        );
       }
     }
-    if (click) {
-      console.log(click);
+    if (path) {
+      console.log(path);
       console.log(Date.now());
-      if (Date.now() - click < 100) {
+      if (Date.now() - path.time < 100) {
         fetchSearchResults();
       }
     }
@@ -43,9 +44,9 @@ function useFile(click) {
       controller.abort();
       ignore = true;
     };
-  }, [click]);
+  }, [path]);
 
-  return [resultPath, isLoadingPath, errorPath];
+  return [result, isLoading, error];
 }
 
-export default useFile;
+export default useResults;
