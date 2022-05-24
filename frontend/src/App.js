@@ -237,11 +237,11 @@ function App() {
           <img id="snapshot" src={require("./components/first_frame.jpg")} />
           <div id="spin">{isLoading ? <Spinner></Spinner> : <div></div>} </div>
           <div id="overlay-content">
-            <b>Previous Results</b>
 
             {Object.keys(result).map((key,id)=>{
               return <div key={id}>
-                <div>-----</div>
+                <div><br></br><b> {id == "1" ? "- Previous Results -" : (id == "0" ? "" : "-----\n") } </b></div>
+                <div><b> {id != "0" ? <br></br> : "" } </b></div>
                 <div>
                   <b>{result[key][0].algo}</b> for <b>{result[key][0].filename}</b>
                   {outcomePrefix(result[key][0].label)}
@@ -257,6 +257,7 @@ function App() {
                   -- elapsed time: <b>{result[key][1].time}</b>
                 </div>
               </div>
+
             })}
 
             <br></br>

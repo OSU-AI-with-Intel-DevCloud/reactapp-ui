@@ -24,13 +24,23 @@ def get_results(path: str):
     #path = '/downloads/vid2.mp4'
     file_path = pathlib.PureWindowsPath(urllib.parse.unquote(path))
     video_name = str(file_path).split("\\")[-1]
-
+    start1 = time.time()
+    start = time.time()
     # this switches slash direction for windows, for mac use p.as_posix()
-    p = subprocess.Popen(f"scp {file_path} devcloud:deepfake/cloud-scripts/input/combined", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
-    time.sleep(10)
-    p2 = subprocess.Popen("scp devcloud:deepfake/cloud-scripts/output/submission.csv output.csv", shell=True, stdin=subprocess.PIPE,  stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+    args = [f'scp',file_path, 'devcloud:deepfake/cloud-scripts/input/combined']
+    p = subprocess.run(args, stdin=subprocess.PIPE) #, shell=True
+    end = time.time()
 
-    time.sleep(4)
+    time.sleep(7)
+    start2 = time.time()
+
+    args2 = ['scp','devcloud:deepfake/cloud-scripts/output/submission.csv', 'output.csv']
+    p2 = subprocess.run(args2, stdin=subprocess.PIPE)
+
+    end2 = time.time()
+    print("{}".format(p2))
+    #print("Upload time {} ; {}".format(end-start, p))
+    #print("Download time {} ; {}".format(end2-start2, p2))
 
     new_Dict = []
     with open('output.csv') as csv_file:
@@ -50,7 +60,7 @@ def get_results(path: str):
     allTests = get_all()
     dct = {}
     lst = allTests[0][-6:]
-    print(lst)
+    lst = lst[::-1]
     for test in lst:
         if test['filename'] not in dct:
             dct[test['filename']] = ["",""]
@@ -58,7 +68,8 @@ def get_results(path: str):
             dct[test['filename']][1] = test
         else:
             dct[test['filename']][0] = test
-
+    end1 = time.time()
+    print("Total time {}".format(end1-start1))
     #save results in text file here
     return Response(response = json.dumps(dct), status = 200)#, headers = {'Access-Control-Allow-Origin':'http://localhost:3000'}
 
