@@ -12,8 +12,8 @@ function useResults(path) {
       let responseBody = {};
       setLoading(true);
       try {
-        const response = await fetch(`/results/${path}`, {
-          signal: controller.signal,
+        const response = await fetch(`/results/${path.path}`, {
+          signal: controller.signal
         });
         responseBody = await response.json();
         console.log(responseBody);
@@ -27,12 +27,18 @@ function useResults(path) {
       }
       if (!ignore) {
         setLoading(false);
-        setError(responseBody.message == 0 ? false : responseBody.message);
-        setResult(responseBody.body || []);
+        setError(responseBody.message === 0 ? false : responseBody.message);
+        setResult(
+          responseBody
+        );
       }
     }
     if (path) {
-      fetchSearchResults();
+      console.log(path);
+      console.log(Date.now());
+      if (Date.now() - path.time < 100) {
+        fetchSearchResults();
+      }
     }
     return () => {
       controller.abort();
