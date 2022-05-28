@@ -38,7 +38,7 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Open [http://localhost:5000/results](http://localhost:5000/results) to view it in your browser.
 ### `flask run`
 The user interface will reload when you make changes to the flask api.\
-You may also see any lint errors in the console.
+You may also see any lint errors in the console.\
 4. Setup [Docker](https://docs.docker.com/get-docker/) and [MongoDB](https://www.mongodb.com/docs/manual/installation/) with the linked instruction.
 5. Start up the Mongo Database using the dockerfile/
 ### `docker build`
