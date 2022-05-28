@@ -35,10 +35,10 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 ### `pip install opencv-python`
 ### `pip install tk`
 3. Now you can run your backend in development mode.\
-Open [http://localhost:5000/results](http://localhost:5000/results) to view it in your browser.
-### `flask run`
+Open [http://localhost:5000/results](http://localhost:5000/results) to view it in your browser.\
 The user interface will reload when you make changes to the flask api.\
 You may also see any lint errors in the console.\
+### `flask run`
 4. Setup [Docker](https://docs.docker.com/get-docker/) and [MongoDB](https://www.mongodb.com/docs/manual/installation/) with the linked instruction.
 5. Start up the Mongo Database using the dockerfile/
 ### `docker build`
