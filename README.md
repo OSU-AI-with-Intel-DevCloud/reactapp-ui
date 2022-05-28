@@ -15,7 +15,7 @@ In addition, 4 GB of RAM and 12 GB of disk space will be required.
 1. Start by cloning this repo onto your local machine.
 2. Setup ssh with [https://devcloud.intel.com/oneapi/documentation/connect-with-ssh-linux-macos/](https://devcloud.intel.com/oneapi/documentation/connect-with-ssh-linux-macos/).\
 ### `ssh devcloud`
-This is necessary for the backend to work correctly and send files to Intel DevCloud.\
+This is necessary for the backend to work correctly and send files to Intel DevCloud.
 An Intel DevCloud account is necessary for this step. Test that it is working with the above command.
 ### `npm i react`
 3. Install React.
