@@ -42,4 +42,5 @@ You may also see any lint errors in the console.
 4. Setup [Docker](https://docs.docker.com/get-docker/) and [MongoDB](https://www.mongodb.com/docs/manual/installation/) with the linked instructions.
 ### `docker build`
 5. Start up the Mongo Database using the dockerfile.
-6. Run the docker image for MongoDB, the Flask backend, the React frontend, and the Intel DevCloud scripts simultaneously to view the Deepfake Detection results in real time on your local web application.
+6. Run the docker image for MongoDB, the Flask backend, the React frontend, and the Intel DevCloud scripts simultaneously to view the Deepfake Detection results in real time on your local web application.\
+When preparing to run with the DevCloud scripts running, ensure that the scp target in the /backend/base.py file matches the folders you have setup in your Intel DevCloud.
