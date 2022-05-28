@@ -11,35 +11,35 @@ In addition, 4 GB of RAM and 12 GB of disk space will be required.
 
 ## Front-end
 
-1. Start by cloning this repo onto your local machine.
 ### `git clone https://github.com/OSU-AI-with-Intel-DevCloud/reactapp-ui`
+1. Start by cloning this repo onto your local machine.
 2. Setup ssh with [https://devcloud.intel.com/oneapi/documentation/connect-with-ssh-linux-macos/](https://devcloud.intel.com/oneapi/documentation/connect-with-ssh-linux-macos/).\
-This is necessary for the backend to work correctly and send files to Intel DevCloud.\
-An Intel DevCloud account is necessary for this step. Test that it is working with:
 ### `ssh devcloud`
-3. Install React.
+This is necessary for the backend to work correctly and send files to Intel DevCloud.\
+An Intel DevCloud account is necessary for this step. Test that it is working with the above command.
 ### `npm i react`
-4. Install necessary dependencies in your directory. Start by switching to the front-end folder.
+3. Install React.
 ### `cd ./frontend`
 ### `npm install`
+4. Install necessary dependencies in your directory. Start by switching to the front-end folder.
+### `npm start`
 5. Run the app in the development mode.\
 Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
-### `npm start`
 
 ## Back-end
 
-1. Start by switching to the back-end folder.
 ### `cd ./backend`
-2. Install necessary software for the flask api.
+1. Start by switching to the back-end folder.
 ### `pip install Flask`
 ### `pip install opencv-python`
 ### `pip install tk`
+2. Install necessary software for the flask api.
+### `flask run`
 3. Now you can run your backend in development mode.\
 Open [http://localhost:5000/results](http://localhost:5000/results) to view it in your browser.\
 The user interface will reload when you make changes to the flask api.\
-You may also see any lint errors in the console.\
-### `flask run`
+You may also see any lint errors in the console.
 4. Setup [Docker](https://docs.docker.com/get-docker/) and [MongoDB](https://www.mongodb.com/docs/manual/installation/) with the linked instruction.
-5. Start up the Mongo Database using the dockerfile/
 ### `docker build`
+5. Start up the Mongo Database using the dockerfile
 6. Run the docker image for MongoDB, the Flask backend, the React frontend, and the Intel DevCloud scripts simultaneously to view the Deepfake Detection results in real time on your local web application.
