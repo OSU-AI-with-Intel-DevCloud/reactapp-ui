@@ -39,8 +39,8 @@ Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
 Open [http://localhost:5000/results](http://localhost:5000/results) to view it in your browser.\
 The user interface will reload when you make changes to the flask api.\
 You may also see any lint errors in the console.
-4. Setup [Docker](https://docs.docker.com/get-docker/) and [MongoDB](https://www.mongodb.com/docs/manual/installation/) with the linked instructions.
-### `docker build`
+4. Setup [Docker](https://docs.docker.com/get-docker/) and [MongoDB](https://www.mongodb.com/docs/manual/installation/) with the linked instructions. Start up docker desktop.
+### `docker-compose up --build`
 5. Start up the Mongo Database using the dockerfile.
 ## Running the entire project
 Run the docker image for MongoDB, the Flask backend, the React frontend, and the Intel DevCloud scripts simultaneously to view the Deepfake Detection results in real time on your local web application.\
