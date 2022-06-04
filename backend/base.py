@@ -31,7 +31,7 @@ def get_results(path: str):
     p = subprocess.run(args, stdin=subprocess.PIPE) #, shell=True
     end = time.time()
 
-    time.sleep(7)
+    time.sleep(9)
     start2 = time.time()
 
     args2 = ['scp','devcloud:deepfake/cloud-scripts/output/submission.csv', 'output.csv']

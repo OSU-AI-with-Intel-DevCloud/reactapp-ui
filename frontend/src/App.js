@@ -243,16 +243,16 @@ function App() {
                 <div><br></br><b> {id == "1" ? "- Previous Results -" : (id == "0" ? "" : "-----\n") } </b></div>
                 <div><b> {id != "0" ? <br></br> : "" } </b></div>
                 <div>
-                  <b>{result[key][0].algo}</b> for <b>{result[key][0].filename}</b>
+                  <b>{result[key][0].algo}</b> for <b style={ Number(result[key][0].label) > 0.5 ? { color: 'red'} : {color: 'green'}}>{result[key][0].filename}</b>
                   {outcomePrefix(result[key][0].label)}
-                  <b>{Number(result[key][0].label)}</b>
+                  <b style={ result[key][0].label > 0.5 ? { color: 'red'} : {color: 'green'}}>{Number(result[key][0].label)}</b>
                   {outcomePostfix(result[key][0].label)}
                   -- elapsed time: <b>{result[key][0].time}</b>
                 </div>
                 <div>
-                  <b>{result[key][1].algo}</b> for <b>{result[key][1].filename}</b>
+                  <b>{result[key][1].algo}</b> for <b style={ Number(result[key][1].label) > 0.5 ? { color: 'red'} : {color: 'green'}}>{result[key][1].filename}</b>
                   {outcomePrefix(result[key][1].label)}
-                  <b>{Number(result[key][1].label)}</b>
+                  <b style={ result[key][1].label > 0.5 ? { color: 'red'} : {color: 'green'}}>{Number(result[key][1].label)}</b>
                   {outcomePostfix(result[key][1].label)}
                   -- elapsed time: <b>{result[key][1].time}</b>
                 </div>
